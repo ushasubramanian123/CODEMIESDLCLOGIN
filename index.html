@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A simple local login form demo.">
+  <title>Login Demo</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="login-card">
+    <div class="brand-mark" aria-hidden="true">L</div>
+    <p class="eyebrow">WELCOME BACK</p>
+    <h1>Sign in</h1>
+    <p class="intro">Enter your details to continue.</p>
+
+    <form id="login-form" novalidate>
+      <div class="field">
+        <label for="username">Username</label>
+        <input
+          id="username"
+          name="username"
+          type="text"
+          autocomplete="username"
+          aria-describedby="username-error"
+          required
+        >
+        <p class="field-error" id="username-error"></p>
+      </div>
+
+      <div class="field">
+        <label for="password">Password</label>
+        <input
+          id="password"
+          name="password"
+          type="password"
+          autocomplete="current-password"
+          aria-describedby="password-error"
+          required
+        >
+        <p class="field-error" id="password-error"></p>
+      </div>
+
+      <button type="submit">Login</button>
+      <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="demo-notice">Demo only — this is not production security.</p>
+  </main>
+</body>
+</html>
